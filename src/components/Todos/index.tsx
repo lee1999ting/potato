@@ -96,7 +96,7 @@ export default function Todos() {
                 clearInterval(id);
                 alert(`完成任务【${start[start.length-1].task}】恭喜你完成所有任务!`);
             }
-        },10);
+        },1000);
     }
 
     return (
