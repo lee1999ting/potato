@@ -49,7 +49,7 @@ export default function Todos() {
     const countDown = (total: number, start: ITodo[]) => {
         let count = total; //任务总时间(秒)
         let startTime = new Date().getTime(); //任务开始时间(ms)
-        let speed = 100;
+        let speed = 1000;
         let diff = 0; //时间误差(ms)
         let i = 0; //任务的索引值
         let id = setInterval(() => {
