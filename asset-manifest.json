@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/potato/static/css/main.41d95b73.css",
-    "main.js": "/potato/static/js/main.3e619c91.js",
+    "main.js": "/potato/static/js/main.8396c47a.js",
     "index.html": "/potato/index.html",
     "main.41d95b73.css.map": "/potato/static/css/main.41d95b73.css.map",
-    "main.3e619c91.js.map": "/potato/static/js/main.3e619c91.js.map"
+    "main.8396c47a.js.map": "/potato/static/js/main.8396c47a.js.map"
   },
   "entrypoints": [
     "static/css/main.41d95b73.css",
-    "static/js/main.3e619c91.js"
+    "static/js/main.8396c47a.js"
   ]
 }
