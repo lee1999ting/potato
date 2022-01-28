@@ -29,7 +29,6 @@ export default function Home() {
             <Content style={{ padding: '0 20px' }}>
                 <div className="site-layout-content">
                     <Routes>
-                        <Route path="/potato" element={<Task />} />
                         <Route path="/" element={<Task />} >
                             <Route path="task" element={<Task />} />
                         </Route>
