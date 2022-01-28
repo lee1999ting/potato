@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { useAppDispatch } from '../../../app/hooks';
-import { deleteTodo, updateTodo } from '../../../app/todosSlice'
+import { deleteTodo, ITodo, updateTodo } from '../../../app/slice/todosSlice'
 import './TodoItem.css'
 
-export default function TodoItem(props: { id: string; task: string; checked: boolean; }) {
-    console.log(props);
+export default function TodoItem(props:ITodo) {
     const {id,task,checked} = props;
     const dispatch = useAppDispatch();
     //标识鼠标移入、移出
@@ -16,10 +15,11 @@ export default function TodoItem(props: { id: string; task: string; checked: boo
 			setMouse(flag);
 		}
 	}
+
 	//勾选、取消勾选某一个todo的回调
-	const handleCheck = (id:string) => {
+	const handleCheck = (todoObj:ITodo) => {
         return (event: { target: { checked: boolean; }; }) => {
-            dispatch(updateTodo({id,todoObj:{checked:event.target.checked}}));
+            dispatch(updateTodo({...todoObj, checked:event.target.checked}));
 		}
 	}
 
@@ -33,7 +33,7 @@ export default function TodoItem(props: { id: string; task: string; checked: boo
     return (
         <li style={{backgroundColor:mouse ? '#ddd' : 'white'}} onMouseEnter={handleMouse(true)} onMouseLeave={handleMouse(false)}>
             <label>
-                <input type="checkbox" checked={checked} onChange={handleCheck(id)}/>
+                <input type="checkbox" checked={checked} onChange={handleCheck(props)}/>
                 <span>{task}</span>
             </label>
             <button onClick={() => handleDelete(id) } className="btn btn-danger" style={{display:mouse?'block':'none'}}>删除</button>

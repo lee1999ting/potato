@@ -1,6 +1,6 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
-import tomato from './tomatoSlice';  // tomatoReducer
-import todos from './todosSlice';    // todosReducer
+import tomato from './slice/tomatoSlice';  // tomatoReducer
+import todos from './slice/todosSlice';    // todosReducer
 
 export const store = configureStore({
   reducer: {

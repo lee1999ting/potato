@@ -29,6 +29,7 @@ export default function Home() {
             <Content style={{ padding: '0 20px' }}>
                 <div className="site-layout-content">
                     <Routes>
+                        <Route path="/potato" element={<Task />} />
                         <Route path="/" element={<Task />} >
                             <Route path="task" element={<Task />} />
                         </Route>
@@ -37,8 +38,8 @@ export default function Home() {
                 </div>
             </Content>
             <Footer style={{ textAlign: 'center', padding: '15px 50px' }}>
-                <MyIcon className="icon" type="icon-fanqie" />
-                番茄钟 ©2022 Created by L
+                <MyIcon className="icon" type="icon-fanqie" style={{fontSize:'16px'}}/>
+                Tomato Clock ©2022 Created by L
             </Footer>
         </Layout>
     );

@@ -1,12 +1,7 @@
-// import React, { useEffect } from 'react';
 import { useAppSelector } from '../../../app/hooks';
 
 export default function CountDown() {
     const { value:time } = useAppSelector(state => state.tomato);
-    
-    // useEffect(() => {
-    //     if(time===0) alert('hhhhh');
-    // },[time])
     const h = Math.floor(time / 60 / 60) % 24;
     const m = Math.floor(time / 60) % 60;
     const s = time % 60;
